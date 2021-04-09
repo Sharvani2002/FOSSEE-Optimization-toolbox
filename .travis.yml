@@ -6,6 +6,7 @@ os:
 branches:
   only:
   - test
+  
 before_install:
  - sudo apt update
  - sudo apt upgrade
