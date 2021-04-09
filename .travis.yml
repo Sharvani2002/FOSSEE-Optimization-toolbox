@@ -1,8 +1,9 @@
 language: scilab
 # dist: bionic
+# safelist
 branches:
- only:
-   - test
+  only:
+  - test
 before_install:
  - sudo apt-get install scilab
 
