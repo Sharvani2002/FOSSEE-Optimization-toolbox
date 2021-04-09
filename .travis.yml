@@ -1,5 +1,8 @@
 language: scilab
 # dist: bionic
+branches:
+ only:
+   - test
 before_install:
  - sudo apt-get install scilab
 
