@@ -8,11 +8,11 @@ branches:
   - test
   
 before_install:
- - sudo apt update
- - sudo apt upgrade
- - sudo apt install scilab
-#  - sudo apt-get update -qq
-#  - sudo apt-get install -y scilab
+#  - sudo apt update
+#  - sudo apt upgrade
+#  - sudo apt install scilab
+ - sudo apt-get update -qq
+ - sudo apt-get install -y scilab
 
 script:
  - scilab -nwni -e 'result = exec("builder.sce", "errcatch"); exit(result)'
