@@ -1,11 +1,20 @@
 language: scilab
 # dist: bionic
 # safelist
+os:
+  - linux
 branches:
   only:
   - test
 before_install:
- - sudo apt-get install scilab
+ - sudo apt update
+ - sudo apt upgrade
+ - sudo apt install scilab
+#  - sudo apt-get update -qq
+#  - sudo apt-get install -y scilab
 
 script:
+ - scilab -nwni -e 'result = exec("builder.sce", "errcatch"); exit(result)'
+ - scilab -nwni -e 'result = exec("loader.sce", "errcatch"); exit(result)'
  - scilab -nwni -f tests/unit_tests/fot_fmincon.tst
+ 
